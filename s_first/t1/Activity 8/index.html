@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -33,14 +32,35 @@
       <li>music2.mp3</li>
       <li>music3.mp3</li>
     </ol>
-    <audio>
+     <audio>
      <source src="" type="audio/mpeg">
      Your browser does not support the audio tag.
     </audio>
+    
+    <!-- mirian way -->
     <div class="controls">
-      <div class="play"><i class="fa fa-play"></i></div>
-      <div class="backward"><i class="fa fa-step-backward"></i></div>
-      <div class="fordward"><i class="fa fa-step-forward"></i></div>
+      <div id="play"><i class="fa fa-play"></i></div>
+      <div id="backward"><i class="fa fa-step-backward"></i></div>
+      <div id="fordward"><i class="fa fa-step-forward"></i></div>
+    </div> 
+
+    <!-- my way -->
+  <div class="audio-player">
+    <audio controls>
+      <source src="spain.mp3" type="audio/mp3">
+    </audio>
+    <div class="controls">
+      <button id="play">forward</button>
+      <button id="play-pause-button">play</button>
+      <button id="backward">backward</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
     </div>
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div id="current-time"></div>
+    <div id="total-time"></div>
+  </div>
+  <script src="js.js"></script>
   </body>
 </html>
